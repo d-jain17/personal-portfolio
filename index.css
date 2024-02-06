@@ -1,0 +1,27 @@
+body {
+    height: 3000px;
+}
+
+.wrapper {
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+}
+
+
+
+#reload {
+    width: 50%;
+    height: 50%;
+}
+@media screen and (max-width: 768px) {
+    #reload {
+        width: 100%;
+        height: auto;
+        
+    }
+    .wrapper{
+        left: 50%;
+    }
+}

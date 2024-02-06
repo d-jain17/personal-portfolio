@@ -7,9 +7,38 @@ body {
     left: 60%;
     transform: translate(-50%, -50%);
     position: fixed;
+
 }
-
-
+.about_main_div p{
+    margin-bottom: 2%;
+    width: 100%;
+    height: auto;
+    max-height: 24vh; 
+    overflow-y: auto;
+}
+.about_main_div{
+    position: fixed;
+    top: 20%;
+    right:10%;
+    width: 30%;
+    max-width: 400px;
+    height: auto;
+    transition: right 1s ease;
+}
+.about{
+    font-size: xxx-large;
+    font-weight: bolder;
+}
+.about_intro_line{
+    font-size: x-large;
+    color:rgb(104, 104, 104);
+    font-family: 'Gowun Batang', serif;
+}
+.about_intro_para{
+    font-family: 'Gowun Batang', serif;
+    color: black;
+   
+}
 
 #reload {
     width: 50%;
@@ -17,11 +46,15 @@ body {
 }
 @media screen and (max-width: 768px) {
     #reload {
-        width: 100%;
+        width: 50%;
         height: auto;
         
     }
     .wrapper{
-        left: 50%;
+        left: 60%;
+    }
+    .about_main_div {
+        top: 10%; 
+        right: 5%;
     }
 }

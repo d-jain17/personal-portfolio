@@ -9,6 +9,10 @@ body {
     position: fixed;
 
 }
+#reload {
+    width: 50%;
+    height: 50%;
+}
 .about_main_div p{
     margin-bottom: 2%;
     width: 100%;
@@ -39,15 +43,62 @@ body {
     color: black;
    
 }
+.topnav {
+    overflow: hidden;
+    background-color: #7C7458;
+    position: relative;
+    font-family: 'Gowun Batang', serif;
+    z-index: 1;
+  }
+  
 
-#reload {
-    width: 50%;
-    height: 50%;
-}
+  .topnav #topnav_links {
+    display: none;
+  }
+  
+  
+  .topnav a {
+    color: black;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+  
+  
+  .topnav a.topnav_hamburger_icon {
+    background:#EB7550 ;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+ 
+  .topnav a:hover {
+    background-color: #EB7550;
+    color: black;
+  }
+  
+  .topnav_logo_icon{
+    background-color:#EB7550;
+    color: #7C7458;
+  }
+  .slogan_main_div{
+    position: fixed;
+    top: 38%;
+    left:10%;
+    width: 20%;
+  }
+  .slogan_main_div p span{
+    font-size: xx-large;
+    opacity: 0; 
+    transition: opacity 0.5s ease;
+  }
 @media screen and (max-width: 768px) {
     #reload {
         width: 50%;
-        height: auto;
+        height: 50%;
         
     }
     .wrapper{
@@ -56,5 +107,10 @@ body {
     .about_main_div {
         top: 10%; 
         right: 5%;
+    }
+    .slogan_main_div{
+        top: 38%;
+        left:10%;
+        width: 20%;
     }
 }

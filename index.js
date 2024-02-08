@@ -21,7 +21,7 @@ function scrollRotate() {
 }
 window.addEventListener('scroll', function() {
     var scrollPosition = window.scrollY;
-    var triggerPosition = 200;
+    var triggerPosition = 300;
     var aboutMainDiv = document.querySelector('.about_main_div');
 
     if (scrollPosition > triggerPosition) {
@@ -30,4 +30,30 @@ window.addEventListener('scroll', function() {
         aboutMainDiv.style.right = '-30%'; 
     }
 });
+function myFunction() {
+    var x = document.getElementById("topnav_links");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+  }
+  window.addEventListener('scroll', function() {
+    var scrollPosition = window.scrollY;
+    var triggerPosition = 200;
+    var words = document.querySelectorAll('.slogan_main_div p span');
+
+    words.forEach(function(word, index) {
+        if (scrollPosition > triggerPosition * index) {
+            word.style.opacity = '1';
+        } else {
+            word.style.opacity = '0'; 
+        }
+    });
+});
+
+
+
+
+
 

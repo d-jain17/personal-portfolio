@@ -1,7 +1,6 @@
-body {
-    height: 3000px;
+html, body {
+ height: 3000px;
 }
-
 .wrapper {
     top: 50%;
     left: 60%;
@@ -27,6 +26,7 @@ body {
     width: 30%;
     max-width: 400px;
     height: auto;
+    overflow-y: auto;
     transition: right 1s ease;
 }
 .about{
@@ -94,6 +94,16 @@ body {
     font-size: xx-large;
     opacity: 0; 
     transition: opacity 0.5s ease;
+  }
+  .projects_main_div{
+    position: fixed;
+    bottom: -60%;
+    left: 10%;
+    width: 80%;
+  }
+  .projects_navbar{
+    display: flex;
+    justify-content: space-between;
   }
 @media screen and (max-width: 768px) {
     #reload {

@@ -23,11 +23,26 @@ window.addEventListener('scroll', function() {
     var scrollPosition = window.scrollY;
     var triggerPosition = 300;
     var aboutMainDiv = document.querySelector('.about_main_div');
-
+    var imagepos=document.querySelector('.wrapper');
     if (scrollPosition > triggerPosition) {
         aboutMainDiv.style.right = '10%'; 
+        imagepos.style.position='absolute';
     } else {
         aboutMainDiv.style.right = '-30%'; 
+        imagepos.style.position='fixed';
+    }
+});
+window.addEventListener('scroll', function() {
+    var scrollPosition = window.scrollY;
+    var triggerPosition = 700;
+   
+    var imagepos=document.querySelector('.wrapper');
+    if (scrollPosition > triggerPosition) {
+       
+        imagepos.style.position='absolute';
+    } else {
+      
+        imagepos.style.position='fixed';
     }
 });
 function myFunction() {

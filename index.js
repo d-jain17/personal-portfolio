@@ -1,7 +1,7 @@
 window.onscroll = function () {
     scrollRotate();
 };
-
+//handles the rotation of and transition of center image
 function scrollRotate() {
     let image = document.getElementById("reload");
     let rotAngle=window.scrollY/2
@@ -19,53 +19,88 @@ function scrollRotate() {
     }
 }
 }
+// Handles the flying in of the about section
 window.addEventListener('scroll', function() {
     var scrollPosition = window.scrollY;
-    var triggerPosition = 300;
+    var flyInTriggerPosition = 300;
     var aboutMainDiv = document.querySelector('.about_main_div');
-    var imagepos=document.querySelector('.wrapper');
-    if (scrollPosition > triggerPosition) {
+    var imagepos = document.querySelector('.wrapper');
+
+    if (scrollPosition > flyInTriggerPosition) {
         aboutMainDiv.style.right = '10%'; 
-        imagepos.style.position='absolute';
+        imagepos.style.position = 'absolute';
     } else {
         aboutMainDiv.style.right = '-30%'; 
-        imagepos.style.position='fixed';
+        imagepos.style.position = 'fixed';
     }
 });
+
+// Handles the appearance/disappearance of the central image as we scroll
 window.addEventListener('scroll', function() {
     var scrollPosition = window.scrollY;
-    var triggerPosition = 700;
-   
-    var imagepos=document.querySelector('.wrapper');
-    if (scrollPosition > triggerPosition) {
-       
-        imagepos.style.position='absolute';
+    var imageTriggerPosition = 700;
+    var imagepos = document.querySelector('.wrapper');
+
+    if (scrollPosition > imageTriggerPosition) {
+        imagepos.style.position = 'absolute';
     } else {
-      
-        imagepos.style.position='fixed';
+        imagepos.style.position = 'fixed';
     }
 });
+
+// Handles opening and closing of the hamburger menu
 function myFunction() {
     var x = document.getElementById("topnav_links");
     if (x.style.display === "block") {
-      x.style.display = "none";
+        x.style.display = "none";
     } else {
-      x.style.display = "block";
+        x.style.display = "block";
     }
-  }
-  window.addEventListener('scroll', function() {
+}
+
+// Handles the appearance of the slogan as we scroll
+window.addEventListener('scroll', function() {
     var scrollPosition = window.scrollY;
-    var triggerPosition = 200;
+    var sloganTriggerPosition = 200;
     var words = document.querySelectorAll('.slogan_main_div p span');
 
     words.forEach(function(word, index) {
-        if (scrollPosition > triggerPosition * index) {
+        if (scrollPosition > sloganTriggerPosition * index) {
             word.style.opacity = '1';
         } else {
             word.style.opacity = '0'; 
         }
     });
 });
+
+// Handles the disappearance of about & slogan as we scroll
+window.addEventListener('scroll', function() {
+    var scrollPosition = window.scrollY;
+    var disappearTriggerPosition = 700;
+    var aboutMainDiv = document.querySelector('.about_main_div');
+    var sloganMainDiv = document.querySelector('.slogan_main_div');
+
+    if (scrollPosition > disappearTriggerPosition) {
+        aboutMainDiv.style.right = '-30%'; // Hides the about section
+        sloganMainDiv.style.opacity = '0'; // Hides the slogan section
+    } else if (scrollPosition > 300) { // Ensure it can fly in
+        aboutMainDiv.style.right = '10%'; // Shows the about section
+        sloganMainDiv.style.opacity = '1'; // Shows the slogan section
+    }
+});
+// Handles the flying in of project section
+window.addEventListener('scroll', function() {
+    var scrollPosition = window.scrollY;
+    var TriggerPosition = 710;
+    var projectMainDiv = document.querySelector('.projects_main_div');
+    if (scrollPosition > TriggerPosition) {
+       projectMainDiv.style.bottom='30%';
+    } else if (scrollPosition < 710) { // Ensure it can fly in
+        projectMainDiv.style.bottom='-60%';
+    }
+});
+
+
 
 
 

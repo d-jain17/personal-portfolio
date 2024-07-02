@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
     <link rel="stylesheet" href="index.css"> 
 
 </head>
@@ -16,7 +17,7 @@
    <section class="section1">
     <!--navigation bar start-->
     <div class="topnav">
-        <a href="index.html" class="topnav_logo_icon">Logo</a>
+        <a href="index.html" class="topnav_logo_icon" style="color: #EB7550;">logo</a>
         <div id="topnav_links">
           <a href="index.html">Home</a>
           <a href="#contact">Work</a>
@@ -44,7 +45,7 @@
     <!--about section start-->
     <div class="about_main_div">
         <p class="about">about.</p>
-        <p class="about_intro_line">I am a tech enthusiast based in Nodia,Uttar Pradesh</p>
+        <p class="about_intro_line">I am a tech enthusiast based in Noida,Uttar Pradesh</p>
         <p class="about_intro_para">I'm deeply immersed in the tech world, focusing on frontend development, problem-solving,
              and machine learning. I love crafting user interfaces and tackling complex algorithms. 
              Beyond tech, I'm a foodie, always exploring street food flavors and cozy cafes.During my free time, I also love indulging in 
@@ -61,17 +62,31 @@
   </section>
    <!--section 1 end-->
     <!--projects section start-->
-    <div class="projects_main_div">
+    <div class="projects_main_div common_animate">
      <center><h1>PROJECTS</h1></center>
-     <div class="projects_navbar">
-      <div>ALL</div>
-      <div>HTML/CSS</div>
-      <div>JAVASCRIPT</div>
-     </div>
-     <div class="projects_imagegrid">
-      <img src="breakdown.png">
-     </div>
+     <br><br>
+     <div class="projects_imagegrid ">
+      <div class="image-container">
+        <img src="breakdown.png" alt="Project Image" class="hover-image">
+        <div class="hover-text">Break The Wall </div>
+      </div>
+      <div class="image-container">
+        <img src="chemistryCupid.png" alt="Project Image" class="hover-image">
+        <div class="hover-text">Chemistry Cupid </div>
+      </div>
+      <div class="image-container">
+        <img src="whack.png" alt="Project Image" class="hover-image">
+        <div class="hover-text">Whack the Mole </div>
+      </div>
     </div>
+    <div class="right-arrow-container">
+      <div class="right_animate">
+        <a href="resume.html">
+        <i class="fa fa-arrow-right" style="color: #000000;"></i>
+      </a>
+      </div>
+      </div>
+  </div>
     <!--projects section end-->
     <script src="index.js"></script>
 </body>

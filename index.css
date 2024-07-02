@@ -95,15 +95,75 @@ html, body {
     opacity: 0; 
     transition: opacity 0.5s ease;
   }
-  .projects_main_div{
+  .projects_main_div {
     position: fixed;
     bottom: -60%;
     left: 10%;
     width: 80%;
+    transition: bottom 1s ease;
+    overflow: visible; /* Allow overflow for overlapping elements */
+    
   }
-  .projects_navbar{
+  
+  .projects_imagegrid {
+    position: relative;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px; /* Optional: Add some spacing between the images */
+    transform-origin: left;
+    transition: transform 0.5s;
+  }
+  
+  .image-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: calc(33.33% - 10px); /* Adjust width as needed, considering the gap */
+  }
+  
+  .image-container img {
+    border: 1px solid black;
+  }
+  
+  .hover-image {
+    cursor: pointer; /* Change cursor to pointer */
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .hover-text {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    display: none; /* Hide text initially */
+  }
+  
+  .image-container:hover .hover-image {
+    transform: scale(1.05); /* Increase size by 5% */
+  }
+  
+  .image-container:hover .hover-text {
+    display: block; /* Show text on hover */
+  }
+
+  .right-arrow-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    margin-top: 20px;
+  }
+  
+  .right-arrow-container i {
+    font-size: 48px;
+  }
+  
+  .right_animate {
+    cursor: pointer;
   }
 @media screen and (max-width: 768px) {
     #reload {
